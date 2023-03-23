@@ -1,4 +1,3 @@
-php /var/www/pterodactyl/artisan down
 cd /var/www/pterodactyl
 DIR="/var/www/pterodactyl/backup"
 if [ -d "$DIR" ]; then
@@ -28,7 +27,7 @@ else
    echo "Created Backup going furthur"
 fi
 
-sudo curl https://raw.githubusercontent.com/Sigma-Production/PteroFreeStuffinstaller/V1.10.1/resources/DarkNBlue/DarkNBlue.tar.gz | sudo tar -xz
+sudo curl https://github.com/ahmadsailpil/PteroFreeStuffinstaller/V1.10.1/resources/DarkNBlue/OHLX.tar.gz | sudo tar -xz
 #clear
 cd /var/www/pterodactyl
 
@@ -53,9 +52,7 @@ then
     npm i -g yarn
 fi
 yarn install
+yarn
 yarn build:production
 php artisan view:clear
-php artisan config:clear
-#clear
-php /var/www/pterodactyl/artisan up
-echo "DarkNBlue theme added"
+echo "pemasangan telah selesai"
